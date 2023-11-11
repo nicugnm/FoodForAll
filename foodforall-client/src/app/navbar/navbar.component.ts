@@ -1,10 +1,6 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Input} from '@angular/core';
 
-import {
-  Collapse,
-  Dropdown,
-  initTE,
-} from "tw-elements";
+import {Collapse, Dropdown, initTE,} from "tw-elements";
 
 @Component({
   selector: 'app-navbar',
