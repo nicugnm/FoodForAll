@@ -55,7 +55,7 @@
           >
         </li>
         <!-- Register link -->
-        <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref *ngIf="!isLogged">
+        <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref [hidden]="isLogged">
           <a
             class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
             routerLink="/register"
@@ -64,7 +64,7 @@
           >
         </li>
         <!-- Login link -->
-        <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref *ngIf="!isLogged">
+        <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref [hidden]="isLogged">
           <a
             class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
             routerLink="/login"
@@ -77,7 +77,7 @@
     </div>
 
     <!-- Right elements -->
-    <div class="relative flex items-center">
+    <div class="relative flex items-center" [hidden]="!isLogged">
       <!-- Comenzi Icon -->
       <a
         class="mr-5 flex text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
@@ -112,7 +112,6 @@
         <!-- First dropdown trigger -->
         <a
           class="hidden-arrow mr-4 flex items-center text-secondary-500 transition duration-200 hover:text-secondary-400 hover:ease-in-out focus:text-secondary-400 disabled:text-black/30 motion-reduce:transition-none"
-          href="#"
           id="dropdownMenuButton1"
           role="button"
           data-te-dropdown-toggle-ref
