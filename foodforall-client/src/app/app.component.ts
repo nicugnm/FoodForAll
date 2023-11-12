@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { Carousel,
-  Ripple,
-  initTE, } from 'tw-elements';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +7,4 @@ import { Carousel,
 })
 export class AppComponent {
   title = 'foodforall-client';
-
-  ngOnInit() {
-    initTE({ Carousel, Ripple });
-  }
 }

@@ -12,6 +12,12 @@ import { OrdersComponent } from './components/orders/orders.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { CartComponent } from './components/cart/cart.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import {
+  RestaurantsAddonTagsComponent,
+  TagType
+} from './components/restaurants-addon-tags/restaurants-addon-tags.component';
+import { RestaurantInfoComponent } from './restaurant-info/restaurant-info.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +30,9 @@ import { CartComponent } from './components/cart/cart.component';
     ResetPasswordComponent,
     ProfileComponent,
     CartComponent,
+    HomepageComponent,
+    RestaurantsAddonTagsComponent,
+    RestaurantInfoComponent
   ],
   imports: [
     BrowserModule,
