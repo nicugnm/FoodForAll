@@ -17,7 +17,8 @@ import {
   RestaurantsAddonTagsComponent,
   TagType
 } from './components/restaurants-addon-tags/restaurants-addon-tags.component';
-import { RestaurantInfoComponent } from './restaurant-info/restaurant-info.component';
+import { RestaurantInfoComponent } from './components/restaurant-info/restaurant-info.component';
+import { RestaurantsHomepageComponent } from './components/restaurants-homepage/restaurants-homepage.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RestaurantInfoComponent } from './restaurant-info/restaurant-info.compo
     CartComponent,
     HomepageComponent,
     RestaurantsAddonTagsComponent,
-    RestaurantInfoComponent
+    RestaurantInfoComponent,
+    RestaurantsHomepageComponent
   ],
   imports: [
     BrowserModule,

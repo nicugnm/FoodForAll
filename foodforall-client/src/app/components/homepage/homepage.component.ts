@@ -8,11 +8,5 @@ import {RestaurantsService} from "../../services/restaurants/restaurants.service
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent {
-  protected readonly TagType = TagType;
 
-  protected readonly restaurantService: RestaurantsService;
-
-  constructor(restaurantService: RestaurantsService) {
-    this.restaurantService = restaurantService;
-  }
 }

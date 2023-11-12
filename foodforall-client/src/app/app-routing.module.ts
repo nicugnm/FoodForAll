@@ -8,7 +8,7 @@ import {ProfileComponent} from "./components/profile/profile.component";
 import {ResetPasswordComponent} from "./components/reset-password/reset-password.component";
 import {CartComponent} from "./components/cart/cart.component";
 import {HomepageComponent} from "./components/homepage/homepage.component";
-import {RestaurantInfoComponent} from "./restaurant-info/restaurant-info.component";
+import {RestaurantInfoComponent} from "./components/restaurant-info/restaurant-info.component";
 
 
 
