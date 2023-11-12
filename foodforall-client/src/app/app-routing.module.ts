@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import {RegisterComponent} from "./register/register.component";
-import {LoginComponent} from "./login/login.component";
-import {ForgotPasswordComponent} from "./forgot-password/forgot-password.component";
+import {RegisterComponent} from "./components/register/register.component";
+import {LoginComponent} from "./components/login/login.component";
+import {ForgotPasswordComponent} from "./components/forgot-password/forgot-password.component";
 import {RouterModule, Routes} from "@angular/router";
-import {OrdersComponent} from "./orders/orders.component";
-import {ProfileComponent} from "./profile/profile.component";
-import {ResetPasswordComponent} from "./reset-password/reset-password.component";
-import {CartComponent} from "./cart/cart.component";
+import {OrdersComponent} from "./components/orders/orders.component";
+import {ProfileComponent} from "./components/profile/profile.component";
+import {ResetPasswordComponent} from "./components/reset-password/reset-password.component";
+import {CartComponent} from "./components/cart/cart.component";
 
 
 
