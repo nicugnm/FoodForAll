@@ -21,6 +21,7 @@ import { RestaurantInfoComponent } from './components/restaurant-info/restaurant
 import { RestaurantsHomepageComponent } from './components/restaurants-homepage/restaurants-homepage.component';
 import { SheltersComponent } from './components/shelters/shelters.component';
 import { SheltersHomepageComponent } from './components/shelters-homepage/shelters-homepage.component';
+import { ShelterInfoComponent } from './components/shelter-info/shelter-info.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { SheltersHomepageComponent } from './components/shelters-homepage/shelte
     RestaurantInfoComponent,
     RestaurantsHomepageComponent,
     SheltersComponent,
-    SheltersHomepageComponent
+    SheltersHomepageComponent,
+    ShelterInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -53,6 +53,7 @@
                     *ngFor="let shelter of sheltersService.shelters; let i = index">
                 <img
                         src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(2{{i + 3}}).jpg"
+                        routerLink="/shelter/{{shelter.id}}"
                         class="block w-full"
                         alt="..." />
                 <div
