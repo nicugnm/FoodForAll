@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 
-import {Collapse, Dropdown, initTE,} from "tw-elements";
 import {AuthService} from "../../services/auth/auth.service";
 
 @Component({
@@ -8,16 +7,22 @@ import {AuthService} from "../../services/auth/auth.service";
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
   private readonly authService: AuthService;
 
-  constructor(authService: AuthService) {
-    this.authService = authService;
+  protected dropdownOpen = false;
+
+  closeDropdown() {
+    this.dropdownOpen = false;
   }
 
-  ngOnInit() {
-    initTE({Collapse, Dropdown});
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+
+  constructor(authService: AuthService) {
+    this.authService = authService;
   }
 
   isLogged(): boolean {
@@ -27,4 +32,6 @@ export class NavbarComponent implements OnInit {
   setLogout() {
     this.authService.logged = false;
   }
+
+  protected readonly HTMLOptGroupElement = HTMLOptGroupElement;
 }

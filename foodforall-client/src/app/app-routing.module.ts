@@ -9,11 +9,15 @@ import {ResetPasswordComponent} from "./components/reset-password/reset-password
 import {CartComponent} from "./components/cart/cart.component";
 import {HomepageComponent} from "./components/homepage/homepage.component";
 import {RestaurantInfoComponent} from "./components/restaurant-info/restaurant-info.component";
+import {HomepageDetailsComponent} from "./components/homepage-details/homepage-details.component";
+import {RestaurantsHomepageComponent} from "./components/restaurants-homepage/restaurants-homepage.component";
 
 
 
 const routes: Routes = [
-  { path: '', component: HomepageComponent },
+  { path: '', redirectTo: 'homepage', pathMatch: 'full'},
+  { path: 'homepage', component: HomepageDetailsComponent },
+  { path: 'homepage-details', component: RestaurantsHomepageComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },

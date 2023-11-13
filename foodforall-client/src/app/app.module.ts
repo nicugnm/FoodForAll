@@ -19,6 +19,8 @@ import {
 } from './components/restaurants-addon-tags/restaurants-addon-tags.component';
 import { RestaurantInfoComponent } from './components/restaurant-info/restaurant-info.component';
 import { RestaurantsHomepageComponent } from './components/restaurants-homepage/restaurants-homepage.component';
+import { HomepageDetailsComponent } from './components/homepage-details/homepage-details.component';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -34,12 +36,14 @@ import { RestaurantsHomepageComponent } from './components/restaurants-homepage/
     HomepageComponent,
     RestaurantsAddonTagsComponent,
     RestaurantInfoComponent,
-    RestaurantsHomepageComponent
+    RestaurantsHomepageComponent,
+    HomepageDetailsComponent
   ],
   imports: [
     BrowserModule,
     StoreModule.forRoot({}, {}),
-    AppRoutingModule
+    AppRoutingModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]
