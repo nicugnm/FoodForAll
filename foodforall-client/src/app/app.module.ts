@@ -19,6 +19,8 @@ import {
 } from './components/restaurants-addon-tags/restaurants-addon-tags.component';
 import { RestaurantInfoComponent } from './components/restaurant-info/restaurant-info.component';
 import { RestaurantsHomepageComponent } from './components/restaurants-homepage/restaurants-homepage.component';
+import { SheltersComponent } from './components/shelters/shelters.component';
+import { SheltersHomepageComponent } from './components/shelters-homepage/shelters-homepage.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { RestaurantsHomepageComponent } from './components/restaurants-homepage/
     HomepageComponent,
     RestaurantsAddonTagsComponent,
     RestaurantInfoComponent,
-    RestaurantsHomepageComponent
+    RestaurantsHomepageComponent,
+    SheltersComponent,
+    SheltersHomepageComponent
   ],
   imports: [
     BrowserModule,
