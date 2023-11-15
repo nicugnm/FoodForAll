@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {Carousel, initTE} from "tw-elements";
+import {Component} from '@angular/core';
 import {SheltersService} from "../../services/shelters/shelters.service";
 
 @Component({
@@ -7,14 +6,7 @@ import {SheltersService} from "../../services/shelters/shelters.service";
   templateUrl: './shelters-homepage.component.html',
   styleUrls: ['./shelters-homepage.component.css']
 })
-export class SheltersHomepageComponent implements OnInit {
-  protected readonly sheltersService: SheltersService;
-
-  constructor(sheltersService: SheltersService) {
-    this.sheltersService = sheltersService;
-  }
-
-  ngOnInit(): void {
-    initTE({ Carousel });
+export class SheltersHomepageComponent {
+  constructor(protected sheltersService: SheltersService) {
   }
 }

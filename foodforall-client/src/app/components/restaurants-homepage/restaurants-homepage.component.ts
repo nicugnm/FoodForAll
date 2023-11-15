@@ -1,12 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {RestaurantsService} from "../../services/restaurants/restaurants.service";
-import {TagType} from "../restaurants-addon-tags/restaurants-addon-tags.component";
+import {Flowbite} from "../../hacks";
 
 @Component({
   selector: 'app-restaurants-homepage',
   templateUrl: './restaurants-homepage.component.html',
   styleUrls: ['./restaurants-homepage.component.css']
 })
+@Flowbite()
 export class RestaurantsHomepageComponent implements OnInit {
   protected readonly restaurantService: RestaurantsService;
 

@@ -1,25 +1,17 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 
 import {AuthService} from "../../services/auth/auth.service";
+import {Flowbite} from "../../hacks";
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
+@Flowbite()
 export class NavbarComponent {
 
   private readonly authService: AuthService;
-
-  protected dropdownOpen = false;
-
-  closeDropdown() {
-    this.dropdownOpen = false;
-  }
-
-  toggleDropdown() {
-    this.dropdownOpen = !this.dropdownOpen;
-  }
 
   constructor(authService: AuthService) {
     this.authService = authService;
@@ -29,9 +21,16 @@ export class NavbarComponent {
     return this.authService.logged;
   }
 
-  setLogout() {
+  setLogout(): void {
     this.authService.logged = false;
   }
 
-  protected readonly HTMLOptGroupElement = HTMLOptGroupElement;
+  dropdownInformationOpen = false;
+
+  toggleDropdown(dropdown: string) {
+    if (dropdown === 'dropdownInformation') {
+      this.dropdownInformationOpen = !this.dropdownInformationOpen;
+    }
+    // Add more conditions for other dropdowns if needed
+  }
 }
