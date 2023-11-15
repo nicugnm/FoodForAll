@@ -28,5 +28,6 @@ jobs:
       - name: npm run build and npm ci
         run: |
           cd foodforall-client
+          npm install --force
           npm run build --force
           npm ci
