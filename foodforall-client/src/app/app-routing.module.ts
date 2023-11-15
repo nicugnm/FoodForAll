@@ -10,6 +10,7 @@ import {CartComponent} from "./components/cart/cart.component";
 import {HomepageComponent} from "./components/homepage/homepage.component";
 import {RestaurantInfoComponent} from "./components/restaurant-info/restaurant-info.component";
 import {ShelterInfoComponent} from "./components/shelter-info/shelter-info.component";
+import {SearchElementsComponent} from "./components/search-elements/search-elements.component";
 
 
 
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'reset-password', component: ResetPasswordComponent },
   { path: 'cart', component: CartComponent },
   { path: 'restaurant/:id', component: RestaurantInfoComponent },
-  { path: 'shelter/:id', component: ShelterInfoComponent }
+  { path: 'shelter/:id', component: ShelterInfoComponent },
+  { path: 'search-elements/:keywords', component: SearchElementsComponent }
 ];
 
 @NgModule({

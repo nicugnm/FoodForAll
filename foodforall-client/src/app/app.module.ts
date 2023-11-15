@@ -22,6 +22,8 @@ import { RestaurantsHomepageComponent } from './components/restaurants-homepage/
 import { SheltersComponent } from './components/shelters/shelters.component';
 import { SheltersHomepageComponent } from './components/shelters-homepage/shelters-homepage.component';
 import { ShelterInfoComponent } from './components/shelter-info/shelter-info.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { SearchElementsComponent } from './components/search-elements/search-elements.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { ShelterInfoComponent } from './components/shelter-info/shelter-info.com
     RestaurantsHomepageComponent,
     SheltersComponent,
     SheltersHomepageComponent,
-    ShelterInfoComponent
+    ShelterInfoComponent,
+    SearchBarComponent,
+    SearchElementsComponent
   ],
   imports: [
     BrowserModule,

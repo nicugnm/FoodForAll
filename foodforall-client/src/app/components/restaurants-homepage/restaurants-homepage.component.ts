@@ -1,15 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {RestaurantsService} from "../../services/restaurants/restaurants.service";
-import {TagType} from "../restaurants-addon-tags/restaurants-addon-tags.component";
 import {initTE, Carousel} from "tw-elements";
-import {TailwindElements} from "../../hacks";
+
 
 @Component({
   selector: 'app-restaurants-homepage',
   templateUrl: './restaurants-homepage.component.html',
   styleUrls: ['./restaurants-homepage.component.css']
 })
-@TailwindElements()
 export class RestaurantsHomepageComponent implements OnInit {
   protected readonly restaurantService: RestaurantsService;
 

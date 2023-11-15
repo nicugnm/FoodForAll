@@ -1,5 +1,5 @@
-import { initTE } from 'tw-elements';
 import { Subject, concatMap, delay, of } from "rxjs";
+import {Carousel, initTE} from "tw-elements";
 
 let tailwindelementsQueue = new Subject<any>();
 
@@ -50,7 +50,7 @@ export function InittailwindelementsFix () {
             const element = tailwindelementsElements[i];
             element.setAttribute('tailwindelements-initialized', '');
         }
-        initTE();
+        initTE( { Carousel });
 
         tailwindelementsElements.forEach(element => {
             const attributes: { name: string; value: string }[] = Array.from(element.attributes);
