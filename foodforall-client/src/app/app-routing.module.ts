@@ -9,15 +9,13 @@ import {ResetPasswordComponent} from "./components/reset-password/reset-password
 import {CartComponent} from "./components/cart/cart.component";
 import {HomepageComponent} from "./components/homepage/homepage.component";
 import {RestaurantInfoComponent} from "./components/restaurant-info/restaurant-info.component";
-import {HomepageDetailsComponent} from "./components/homepage-details/homepage-details.component";
-import {RestaurantsHomepageComponent} from "./components/restaurants-homepage/restaurants-homepage.component";
+import {ShelterInfoComponent} from "./components/shelter-info/shelter-info.component";
+import {SearchElementsComponent} from "./components/search-elements/search-elements.component";
 
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'homepage', pathMatch: 'full'},
-  { path: 'homepage', component: HomepageDetailsComponent },
-  { path: 'homepage-details', component: RestaurantsHomepageComponent },
+  { path: '', component: HomepageComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
@@ -25,7 +23,9 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'reset-password', component: ResetPasswordComponent },
   { path: 'cart', component: CartComponent },
-  { path: 'restaurant/:id', component: RestaurantInfoComponent }
+  { path: 'restaurant/:id', component: RestaurantInfoComponent },
+  { path: 'shelter/:id', component: ShelterInfoComponent },
+  { path: 'search-elements/:keywords', component: SearchElementsComponent }
 ];
 
 @NgModule({

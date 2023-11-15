@@ -19,8 +19,11 @@ import {
 } from './components/restaurants-addon-tags/restaurants-addon-tags.component';
 import { RestaurantInfoComponent } from './components/restaurant-info/restaurant-info.component';
 import { RestaurantsHomepageComponent } from './components/restaurants-homepage/restaurants-homepage.component';
-import { HomepageDetailsComponent } from './components/homepage-details/homepage-details.component';
-import {NgOptimizedImage} from "@angular/common";
+import { SheltersComponent } from './components/shelters/shelters.component';
+import { SheltersHomepageComponent } from './components/shelters-homepage/shelters-homepage.component';
+import { ShelterInfoComponent } from './components/shelter-info/shelter-info.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { SearchElementsComponent } from './components/search-elements/search-elements.component';
 
 @NgModule({
   declarations: [
@@ -37,13 +40,16 @@ import {NgOptimizedImage} from "@angular/common";
     RestaurantsAddonTagsComponent,
     RestaurantInfoComponent,
     RestaurantsHomepageComponent,
-    HomepageDetailsComponent
+    SheltersComponent,
+    SheltersHomepageComponent,
+    ShelterInfoComponent,
+    SearchBarComponent,
+    SearchElementsComponent
   ],
   imports: [
     BrowserModule,
     StoreModule.forRoot({}, {}),
-    AppRoutingModule,
-    NgOptimizedImage
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
