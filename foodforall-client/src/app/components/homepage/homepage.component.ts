@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-import {TagType} from "../restaurants-addon-tags/restaurants-addon-tags.component";
-import {RestaurantsService} from "../../services/restaurants/restaurants.service";
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-homepage',
@@ -8,5 +6,4 @@ import {RestaurantsService} from "../../services/restaurants/restaurants.service
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent {
-
 }

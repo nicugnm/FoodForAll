@@ -1,13 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {RestaurantsService} from "../../services/restaurants/restaurants.service";
-import {initTE, Carousel} from "tw-elements";
-
+import {Flowbite} from "../../hacks";
 
 @Component({
   selector: 'app-restaurants-homepage',
   templateUrl: './restaurants-homepage.component.html',
   styleUrls: ['./restaurants-homepage.component.css']
 })
+@Flowbite()
 export class RestaurantsHomepageComponent implements OnInit {
   protected readonly restaurantService: RestaurantsService;
 
@@ -16,6 +16,5 @@ export class RestaurantsHomepageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    initTE({ Carousel });
   }
 }

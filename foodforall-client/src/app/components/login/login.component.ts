@@ -1,10 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
-import {
-  Input,
-  Ripple,
-  initTE,
-} from "tw-elements";
 import {AuthService} from "../../services/auth/auth.service";
 
 @Component({
@@ -12,7 +7,7 @@ import {AuthService} from "../../services/auth/auth.service";
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
   private readonly authService: AuthService;
 
@@ -22,9 +17,5 @@ export class LoginComponent implements OnInit {
 
   setLogged() {
     this.authService.logged = true;
-  }
-
-  ngOnInit() {
-    initTE({ Input, Ripple });
   }
 }
