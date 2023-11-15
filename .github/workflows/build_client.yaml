@@ -25,7 +25,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: npm ci and npm run build
+      - name: npm run build and npm ci
         run: |
+          cd foodforall-client
           npm run build --force
           npm ci
