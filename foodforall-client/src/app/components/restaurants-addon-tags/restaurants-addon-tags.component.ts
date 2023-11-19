@@ -13,8 +13,8 @@ export class RestaurantsAddonTagsComponent {
 }
 
 export enum TagType {
-  MostWanted,
-  MostReviewed,
-  EcoFriendly,
-  Default
+  MostWanted = 0,
+  MostReviewed = 1,
+  EcoFriendly = 2,
+  Default = 3
 }
