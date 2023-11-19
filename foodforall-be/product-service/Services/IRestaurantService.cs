@@ -1,18 +1,13 @@
+using product_service.Models;
+
 namespace product_service.Services;
 
 public interface IRestaurantService
 {
     //  Services
-    Task<List<Author>> GetAuthorsAsync(); // GET All Authors
-    Task<Author> GetAuthorAsync(Guid id, bool includeBooks = false); // GET Single Author
-    Task<Author> AddAuthorAsync(Author author); // POST New Author
-    Task<Author> UpdateAuthorAsync(Author author); // PUT Author
-    Task<(bool, string)> DeleteAuthorAsync(Author author); // DELETE Author
-
-    // Book Services
-    Task<List<Book>> GetBooksAsync(); // GET All Books
-    Task<Book> GetBookAsync(Guid id); // Get Single Book
-    Task<Book> AddBookAsync(Book book); // POST New Book
-    Task<Book> UpdateBookAsync(Book book); // PUT Book
-    Task<(bool, string)> DeleteBookAsync(Book book); // DELETE Book
+    Task<List<Restaurant>> GetRestaurantsAsync(); // GET All Restaurant
+    Task<Restaurant> GetRestaurantAsync(Guid id, bool includeProducts = false); // GET Single Restaurant
+    Task<Restaurant> AddRestaurantAsync(Restaurant restaurant); // POST New Restaurant
+    Task<Restaurant> UpdateRestaurantAsync(Restaurant restaurant); // PUT Restaurant
+    Task<(bool, string)> DeleteRestaurantAsync(Restaurant restaurant); // DELETE Restaurant
 }
