@@ -24,7 +24,7 @@ import { SheltersHomepageComponent } from './components/shelters-homepage/shelte
 import { ShelterInfoComponent } from './components/shelter-info/shelter-info.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { SearchElementsComponent } from './components/search-elements/search-elements.component';
-import {HttpClientModule} from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
