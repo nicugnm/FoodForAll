@@ -18,6 +18,7 @@ public class RestaurantService : IRestaurantService
         try
         {
             return await _db.RestaurantDbSet
+                .Include(r => r.Products)
                 .ToListAsync();
         }
         catch (Exception ex)
