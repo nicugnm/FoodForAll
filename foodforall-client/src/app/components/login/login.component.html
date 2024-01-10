@@ -1,15 +1,15 @@
-<section class="h-screen p-10">
+<section class="h-screen bg-gray-50 p-10">
   <div class="h-full">
     <!-- Left column container with background-->
     <div
       class="g-6 flex h-full flex-wrap items-center justify-center">
       <!-- Right column container -->
       <div class="mb-12 md:mb-0 md:w-8/12 lg:w-5/12 xl:w-5/12">
-        <form>
+        <form class="bg-white p-10">
           <!--Sign in section-->
           <div
             class="flex flex-row items-center justify-center">
-            <p class="mb-0 mr-4 text-lg">Sign in with</p>
+            <p class="mb-0 mr-4 font-medium text-gray-900 dark:text-white text-lg">Sign in with</p>
 
             <!-- Facebook -->
             <button class="mx-1 h-9 w-9 rounded-full shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] bg-blue-500 hover:bg-blue-600 active:bg-blue-700">
@@ -59,27 +59,14 @@
             </p>
           </div>
 
-          <!-- Email input -->
-          <div class="relative mb-6">
-            <input type="text"
-                   class="peer block w-full rounded border border-neutral-300 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:border-blue-500 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:border-neutral-700 dark:focus:border-blue-500"
-            />
-            <label
-                    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-blue-500 motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-blue-500"
-            >Email address
-            </label>
+          <div class="mt-5 mb-5">
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+            <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="">
           </div>
 
-
-          <!-- Password input -->
-          <div class="relative mb-6">
-            <input type="password"
-                   class="peer block w-full rounded border border-neutral-300 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:border-blue-500 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:border-neutral-700 dark:focus:border-blue-500"
-            />
-            <label
-                    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-blue-500 motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-blue-500"
-            >Password
-            </label>
+          <div class="mt-5 mb-5">
+            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
           </div>
 
           <div class="mb-6 flex items-center justify-between">
