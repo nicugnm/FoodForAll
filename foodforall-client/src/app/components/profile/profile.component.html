@@ -1,1 +1,55 @@
-<p>profile works!</p>
+<section class="bg-gray-50 dark:bg-gray-900">
+  <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+    <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+      <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+        <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class="flex justify-end px-4 pt-4">
+          </div>
+          <div class="flex flex-col items-center pb-10 m-5 p-5 ">
+            <img class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                 src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg" loading="lazy" alt="Bonnie image"
+            (drag)="$event"/>
+            <button
+              class="hover:underline dark:text-blue-500">Change profile picture
+            </button>
+
+            <div>
+              <h5>Age: <p class="text-gray-500">{{profileDetails.age}}</p></h5>
+              <h5>Address: <p class="text-gray-500">{{profileDetails.deliveryAddress}}</p></h5>
+              <h5>City: <p class="text-gray-500">{{profileDetails.city}}</p></h5>
+              <h5>Country: <p class="text-gray-500">{{profileDetails.country}}</p></h5>
+              <h5>County: <p class="text-gray-500">{{profileDetails.county}}</p></h5>
+            </div>
+          </div>
+        </div>
+        <p>About me</p>
+        <p class="text-gray-700">Great software developer with creativity in mind.</p>
+
+<!--        <form class="p-4 md:p-5">-->
+<!--          <div class="grid gap-4 mb-4 grid-cols-2">-->
+<!--            <div class="col-span-2">-->
+<!--              <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>-->
+<!--              <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required="">-->
+<!--            </div>-->
+<!--            <div class="col-span-2 sm:col-span-1">-->
+<!--              <label for="age" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Age</label>-->
+<!--              <input type="number" name="age" id="age" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="15" required="">-->
+<!--            </div>-->
+<!--            <div class="col-span-2 sm:col-span-1">-->
+<!--              <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Address</label>-->
+<!--              <input type="text" name="address" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Example Address" required="">-->
+<!--            </div>-->
+<!--            <div class="col-span-2">-->
+<!--              <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>-->
+<!--              <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write description here"></textarea>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <button type="submit" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">-->
+<!--            <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>-->
+<!--            Update profile-->
+<!--          </button>-->
+<!--        </form>-->
+      </div>
+    </div>
+  </div>
+</section>

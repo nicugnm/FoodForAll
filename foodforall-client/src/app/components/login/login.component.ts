@@ -1,6 +1,9 @@
 import {Component} from '@angular/core';
 
-import {AuthService} from "../../services/auth/auth.service";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {PasswordValidators} from "../register/password-validators";
+import {Store} from "@ngrx/store";
+import {LogIn} from "../../services/auth/auth.actions";
 
 @Component({
   selector: 'app-login',
@@ -9,11 +12,31 @@ import {AuthService} from "../../services/auth/auth.service";
 })
 export class LoginComponent {
 
-  constructor(private authService: AuthService) {
-    this.authService = authService;
+  form = new FormGroup({
+    username: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
+  }, { validators: PasswordValidators.validateLogin });
+
+  constructor(private store: Store) {
+    this.store = store;
   }
 
-  setLogged() {
-    this.authService.logged = true;
+  get username() {
+    return this.form.get('username');
+  }
+
+  get password() {
+    return this.form.get('password');
+  }
+
+  onSubmit() {
+    if (this.form.valid) {
+      this.store.dispatch(
+        LogIn({
+          username: this.form.value['username'],
+          password: this.form.value['password']
+        })
+      );
+    }
   }
 }

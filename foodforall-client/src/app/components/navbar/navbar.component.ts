@@ -2,6 +2,10 @@ import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/c
 
 import {AuthService} from "../../services/auth/auth.service";
 import {Flowbite} from "../../hacks";
+import {AppState} from "../../app.state";
+import {Store} from "@ngrx/store";
+import {selectIsLoggedIn} from "../../services/auth/auth.selectors";
+import {LogOut} from "../../services/auth/auth.actions";
 
 @Component({
   selector: 'app-navbar',
@@ -11,18 +15,16 @@ import {Flowbite} from "../../hacks";
 @Flowbite()
 export class NavbarComponent {
 
-  private readonly authService: AuthService;
+  isLoggedIn$ = this.store.select(selectIsLoggedIn);
 
-  constructor(authService: AuthService) {
-    this.authService = authService;
+  constructor(private store: Store<AppState>) {}
+
+  isLogged() {
+    return this.isLoggedIn$;
   }
 
-  isLogged(): boolean {
-    return this.authService.logged;
-  }
-
-  setLogout(): void {
-    this.authService.logged = false;
+  logout() {
+    this.store.dispatch(LogOut());
   }
 
   dropdownInformationOpen = false;

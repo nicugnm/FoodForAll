@@ -25,6 +25,11 @@ import { ShelterInfoComponent } from './components/shelter-info/shelter-info.com
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { SearchElementsComponent } from './components/search-elements/search-elements.component';
 import { HttpClientModule } from "@angular/common/http";
+import {NgOptimizedImage} from "@angular/common";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {EffectsModule} from "@ngrx/effects";
+import {AuthEffects} from "./services/auth/auth.effects";
+import {reducers} from "./app.state";
 
 @NgModule({
   declarations: [
@@ -49,9 +54,13 @@ import { HttpClientModule } from "@angular/common/http";
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot([AuthEffects]),
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgOptimizedImage,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
