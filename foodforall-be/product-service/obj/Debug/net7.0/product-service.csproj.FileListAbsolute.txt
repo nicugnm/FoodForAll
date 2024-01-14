@@ -77,3 +77,14 @@
 /Users/nicolaemariusghergu/IdeaProjects/FoodForAll/foodforall-be/product-service/bin/Debug/net7.0/Innofactor.EfCoreJsonValueConverter.dll
 /Users/nicolaemariusghergu/IdeaProjects/FoodForAll/foodforall-be/product-service/bin/Debug/net7.0/Innofactor.EfCoreJsonValueConverter.Attributes.dll
 /Users/nicolaemariusghergu/IdeaProjects/FoodForAll/foodforall-be/product-service/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/nicolaemariusghergu/IdeaProjects/FoodForAll/foodforall-be/product-service/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/nicolaemariusghergu/IdeaProjects/FoodForAll/foodforall-be/product-service/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/nicolaemariusghergu/IdeaProjects/FoodForAll/foodforall-be/product-service/bin/Debug/net7.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/nicolaemariusghergu/IdeaProjects/FoodForAll/foodforall-be/product-service/bin/Debug/net7.0/Microsoft.Extensions.Identity.Core.dll
+/Users/nicolaemariusghergu/IdeaProjects/FoodForAll/foodforall-be/product-service/bin/Debug/net7.0/Microsoft.Extensions.Identity.Stores.dll
+/Users/nicolaemariusghergu/IdeaProjects/FoodForAll/foodforall-be/product-service/bin/Debug/net7.0/Microsoft.Extensions.Options.dll
+/Users/nicolaemariusghergu/IdeaProjects/FoodForAll/foodforall-be/product-service/bin/Debug/net7.0/BCrypt.Net-Next.dll
+/Users/nicolaemariusghergu/IdeaProjects/FoodForAll/foodforall-be/product-service/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/nicolaemariusghergu/IdeaProjects/FoodForAll/foodforall-be/product-service/bin/Debug/net7.0/Microsoft.AspNetCore.Authorization.dll
+/Users/nicolaemariusghergu/IdeaProjects/FoodForAll/foodforall-be/product-service/bin/Debug/net7.0/Microsoft.AspNetCore.Metadata.dll
+/Users/nicolaemariusghergu/IdeaProjects/FoodForAll/foodforall-be/product-service/bin/Debug/net7.0/Microsoft.Extensions.Logging.Abstractions.dll

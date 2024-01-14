@@ -47,7 +47,7 @@ namespace product_service.Storage.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductDbSet");
+                    b.ToTable("ProductDbSet", (string)null);
 
                     b.HasData(
                         new
@@ -133,7 +133,7 @@ namespace product_service.Storage.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("RestaurantDbSet");
+                    b.ToTable("RestaurantDbSet", (string)null);
 
                     b.HasData(
                         new
@@ -168,7 +168,7 @@ namespace product_service.Storage.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("RestaurantProduct");
+                    b.ToTable("RestaurantProduct", (string)null);
 
                     b.HasData(
                         new
