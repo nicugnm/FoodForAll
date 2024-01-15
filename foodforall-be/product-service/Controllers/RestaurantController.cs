@@ -6,7 +6,7 @@ using product_service.Services;
 namespace product_service.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class RestaurantController : ControllerBase
 {
     private readonly ILogger<RestaurantController> _logger;
@@ -25,7 +25,7 @@ public class RestaurantController : ControllerBase
         return _restaurantService.GetRestaurantsAsync();
     }
 
-    [HttpPost(Name = "GetProductListPerRestaurant")]
+    [HttpPost("search", Name = "GetProductListPerRestaurant")]
     public Task<List<Restaurant>> Post([FromBody] ProductListRestaurantRequest productListRestaurantRequest)
     {
         return _restaurantService.GetProductListPerRestaurant(productListRestaurantRequest);

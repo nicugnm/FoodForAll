@@ -24,8 +24,15 @@ builder.Services.AddCors(options =>
 
 // Database
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+// Restaurant Database
 builder.Services.AddDbContext<RestaurantDbContext>(options =>
     options.UseSqlServer(connectionString));
+
+// Forms Database
+builder.Services.AddDbContext<FormsDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
 
 // Auth 
 // For Entity Framework
@@ -49,19 +56,22 @@ builder.Services.AddAuthentication(options =>
     .AddJwtBearer(options =>
     {
         options.SaveToken = true;
-        options.RequireHttpsMetadata = false;
+        options.RequireHttpsMetadata = false; // Keep this false for local testing, true for production
+
         options.TokenValidationParameters = new TokenValidationParameters()
         {
             ValidateIssuer = true,
             ValidateAudience = true,
-            ValidAudience = "JWT:ValidAudience",
-            ValidIssuer = "JWT:ValidIssuer",
+            //ValidAudience = "JWT:ValidAudience", // Replace with your intended audience
+            //ValidIssuer = "JWT:ValidIssuer", // Replace with your intended issuer
             IssuerSigningKey = new SymmetricSecurityKey("JWT:Secret"u8.ToArray())
         };
     });
 
+
 // Services Scoped
 builder.Services.AddScoped<IRestaurantService, RestaurantService>();
+builder.Services.AddScoped<IFormsService, FormsService>();
 
 // Controllers
 builder.Services.AddControllers().AddJsonOptions(x =>

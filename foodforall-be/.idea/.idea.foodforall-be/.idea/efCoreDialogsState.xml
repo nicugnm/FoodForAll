@@ -3,7 +3,7 @@
   <component name="EfCoreDialogsState">
     <option name="keyValueStorage">
       <map>
-        <entry key="Common:5b0b9acb-cbb7-42a1-921d-136baa4929a3:dbContext" value="product_service.Storage.AuthDbContext" />
+        <entry key="Common:5b0b9acb-cbb7-42a1-921d-136baa4929a3:dbContext" value="product_service.Storage.FormsDbContext" />
         <entry key="Common:buildConfiguration" value="Debug" />
         <entry key="Common:dbContextFolder" value="Context" />
         <entry key="Common:dbContextName" value="MyDbContext" />
