@@ -59,4 +59,32 @@ public class RestaurantService : IRestaurantService
     {
         throw new NotImplementedException();
     }
+
+    public async Task<List<Restaurant>> GetProductListPerRestaurant(ProductListRestaurantRequest productListRestaurantRequest)
+    {
+        try
+        {
+            var searchKeywordLower = productListRestaurantRequest.SearchKeyword.ToLower();
+
+            var restaurants = await _db.RestaurantDbSet
+                .Include(r => r.Products)
+                .Where(r => r.Products.Any(pr => pr.Name.ToLower().Contains(searchKeywordLower)))
+                .ToListAsync();
+
+            foreach (var restaurant in restaurants)
+            {
+                restaurant.Products = restaurant.Products
+                    .Where(pr => pr.Name.ToLower().Contains(searchKeywordLower))
+                    .ToList();
+            }
+
+            return restaurants;
+        }
+        catch (Exception ex)
+        {
+            return null;
+        }
+    }
+
+
 }

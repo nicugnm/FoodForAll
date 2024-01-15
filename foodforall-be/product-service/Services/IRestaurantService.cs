@@ -10,4 +10,6 @@ public interface IRestaurantService
     Task<Restaurant> AddRestaurantAsync(Restaurant restaurant); // POST New Restaurant
     Task<Restaurant> UpdateRestaurantAsync(Restaurant restaurant); // PUT Restaurant
     Task<(bool, string)> DeleteRestaurantAsync(Restaurant restaurant); // DELETE Restaurant
+
+    Task<List<Restaurant>> GetProductListPerRestaurant(ProductListRestaurantRequest productListRestaurantRequest);
 }

@@ -24,4 +24,10 @@ public class RestaurantController : ControllerBase
     {
         return _restaurantService.GetRestaurantsAsync();
     }
+
+    [HttpPost(Name = "GetProductListPerRestaurant")]
+    public Task<List<Restaurant>> Post([FromBody] ProductListRestaurantRequest productListRestaurantRequest)
+    {
+        return _restaurantService.GetProductListPerRestaurant(productListRestaurantRequest);
+    }
 }
