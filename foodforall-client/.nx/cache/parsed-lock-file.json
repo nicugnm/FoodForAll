@@ -2448,6 +2448,15 @@
         "hash": "sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A=="
       }
     },
+    "npm:@ngrx/effects": {
+      "type": "npm",
+      "name": "npm:@ngrx/effects",
+      "data": {
+        "version": "16.3.0",
+        "packageName": "@ngrx/effects",
+        "hash": "sha512-QvN+jJFqBHH6x5eqtFVeMTcotoWMLTrDjK4wW61hmbYafGmBbEnIgikTsn2DSPA67io0DhgDtBHoBKnicy1gEw=="
+      }
+    },
     "npm:@ngrx/store": {
       "type": "npm",
       "name": "npm:@ngrx/store",
@@ -5301,24 +5310,6 @@
         "hash": "sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA=="
       }
     },
-    "npm:chart.js": {
-      "type": "npm",
-      "name": "npm:chart.js",
-      "data": {
-        "version": "3.9.1",
-        "packageName": "chart.js",
-        "hash": "sha512-Ro2JbLmvg83gXF5F4sniaQ+lTbSv18E+TIf2cOeiH1Iqd2PGFOtem+DUufMZsCJwFE7ywPOpfXFBwRTGq7dh6w=="
-      }
-    },
-    "npm:chartjs-plugin-datalabels": {
-      "type": "npm",
-      "name": "npm:chartjs-plugin-datalabels",
-      "data": {
-        "version": "2.2.0",
-        "packageName": "chartjs-plugin-datalabels",
-        "hash": "sha512-14ZU30lH7n89oq+A4bWaJPnAG8a7ZTk7dKf48YAzMvJjQtjrgg5Dpk9f+LbjCF6bpx3RAGTeL13IXpKQYyRvlw=="
-      }
-    },
     "npm:chokidar": {
       "type": "npm",
       "name": "npm:chokidar",
@@ -5886,15 +5877,6 @@
         "hash": "sha512-GAj5FOq0Hd+RsCGVJxZuKaIDXDf3h6GQoNEjFgbLLI/trgtavwUbSnZ5pVfg27DVCaWjIohryS0JFwIJyT2cMg=="
       }
     },
-    "npm:custom-event-polyfill": {
-      "type": "npm",
-      "name": "npm:custom-event-polyfill",
-      "data": {
-        "version": "1.0.7",
-        "packageName": "custom-event-polyfill",
-        "hash": "sha512-TDDkd5DkaZxZFM8p+1I3yAlvM3rSr1wbrOliG4yJiwinMZN8z/iGL7BTlDkrJcYTmgUSb4ywVCc3ZaUtOtC76w=="
-      }
-    },
     "npm:data-urls": {
       "type": "npm",
       "name": "npm:data-urls",
@@ -6019,15 +6001,6 @@
         "version": "1.2.0",
         "packageName": "destroy",
         "hash": "sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg=="
-      }
-    },
-    "npm:detect-autofill": {
-      "type": "npm",
-      "name": "npm:detect-autofill",
-      "data": {
-        "version": "1.1.4",
-        "packageName": "detect-autofill",
-        "hash": "sha512-utCBQwCR/beSnADQmBC7C4tTueBBkYCl6WSpfGUkYKO/+MzPxqYGj6G4MvHzcKmH1gCTK+VunX2vaagvkRXPvA=="
       }
     },
     "npm:detect-newline": {
@@ -9504,15 +9477,6 @@
         "hash": "sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw=="
       }
     },
-    "npm:perfect-scrollbar": {
-      "type": "npm",
-      "name": "npm:perfect-scrollbar",
-      "data": {
-        "version": "1.5.5",
-        "packageName": "perfect-scrollbar",
-        "hash": "sha512-dzalfutyP3e/FOpdlhVryN4AJ5XDVauVWxybSkLZmakFE2sS3y3pc4JnSprw8tGmHvkaG5Edr5T7LBTZ+WWU2g=="
-      }
-    },
     "npm:picocolors": {
       "type": "npm",
       "name": "npm:picocolors",
@@ -9648,15 +9612,6 @@
         "hash": "sha512-vEJIc8RdiBRu3oRAI0ymerOn+7rPuMvRXslTvZUKZonDHFIczxztIyJ1urxM1x9JXEikvpWWTUUqal5j/8QgvA=="
       }
     },
-    "npm:postcss-load-config@3.1.4": {
-      "type": "npm",
-      "name": "npm:postcss-load-config@3.1.4",
-      "data": {
-        "version": "3.1.4",
-        "packageName": "postcss-load-config",
-        "hash": "sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg=="
-      }
-    },
     "npm:postcss-merge-longhand": {
       "type": "npm",
       "name": "npm:postcss-merge-longhand",
@@ -9754,15 +9709,6 @@
         "version": "6.0.1",
         "packageName": "postcss-nested",
         "hash": "sha512-mEp4xPMi5bSWiMbsgoPfcP74lsWLHkQbZc3sY+jWYd65CUwXrUaTp0fmNpa01ZcETKlIgUdFN/MpS2xZtqL9dQ=="
-      }
-    },
-    "npm:postcss-nested@6.0.0": {
-      "type": "npm",
-      "name": "npm:postcss-nested@6.0.0",
-      "data": {
-        "version": "6.0.0",
-        "packageName": "postcss-nested",
-        "hash": "sha512-0DkamqrPcmkBDsLn+vQDIrtkSbNkv5AD/M322ySo9kqFkCIYklym2xEmWkwo+Y3/qZo34tzEPNUw4y7yMCdv5w=="
       }
     },
     "npm:postcss-normalize-charset": {
@@ -10060,15 +10006,6 @@
         "version": "1.2.3",
         "packageName": "queue-microtask",
         "hash": "sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A=="
-      }
-    },
-    "npm:quick-lru": {
-      "type": "npm",
-      "name": "npm:quick-lru",
-      "data": {
-        "version": "5.1.1",
-        "packageName": "quick-lru",
-        "hash": "sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA=="
       }
     },
     "npm:randombytes": {
@@ -10836,15 +10773,6 @@
         "hash": "sha512-5SEZU4J7pxZgSkv7FP1zY8i2TIAOooNZ1e/OGtxIEv6GltpoiXUqWvLy89+a10qYTB1N5Ifkuw9lqQkN9sscvA=="
       }
     },
-    "npm:tailwindcss@3.3.0": {
-      "type": "npm",
-      "name": "npm:tailwindcss@3.3.0",
-      "data": {
-        "version": "3.3.0",
-        "packageName": "tailwindcss",
-        "hash": "sha512-hOXlFx+YcklJ8kXiCAfk/FMyr4Pm9ck477G0m/us2344Vuj355IpoEDB5UmGAsSpTBmr+4ZhjzW04JuFXkb/fw=="
-      }
-    },
     "npm:tapable": {
       "type": "npm",
       "name": "npm:tapable",
@@ -11068,15 +10996,6 @@
         "version": "1.1.7",
         "packageName": "tuf-js",
         "hash": "sha512-i3P9Kgw3ytjELUfpuKVDNBJvk4u5bXL6gskv572mcevPbSKCV3zt3djhmlEQ65yERjIbOSncy7U4cQJaB1CBCg=="
-      }
-    },
-    "npm:tw-elements": {
-      "type": "npm",
-      "name": "npm:tw-elements",
-      "data": {
-        "version": "1.0.0",
-        "packageName": "tw-elements",
-        "hash": "sha512-pD2bA1bTGzvigU79dz4pGvO207CCOpzhwlxzb7hswx40SMMkJISOkoDxU2ot3OQ7LTZM5GwuLDkZ+dquK0wdYQ=="
       }
     },
     "npm:type-check": {
@@ -15387,6 +15306,26 @@
       "type": "static"
     },
     {
+      "source": "npm:@ngrx/effects",
+      "target": "npm:@angular/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ngrx/effects",
+      "target": "npm:@ngrx/store",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ngrx/effects",
+      "target": "npm:rxjs",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ngrx/effects",
+      "target": "npm:tslib",
+      "type": "static"
+    },
+    {
       "source": "npm:@ngrx/store",
       "target": "npm:@angular/core",
       "type": "static"
@@ -18647,11 +18586,6 @@
       "type": "static"
     },
     {
-      "source": "npm:chartjs-plugin-datalabels",
-      "target": "npm:chart.js",
-      "type": "static"
-    },
-    {
       "source": "npm:chokidar",
       "target": "npm:anymatch",
       "type": "static"
@@ -19369,11 +19303,6 @@
     {
       "source": "npm:define-data-property",
       "target": "npm:has-property-descriptors",
-      "type": "static"
-    },
-    {
-      "source": "npm:detect-autofill",
-      "target": "npm:custom-event-polyfill",
       "type": "static"
     },
     {
@@ -27234,221 +27163,6 @@
     {
       "source": "npm:minipass-fetch@3.0.4",
       "target": "npm:encoding",
-      "type": "static"
-    },
-    {
-      "source": "npm:tw-elements",
-      "target": "npm:@popperjs/core",
-      "type": "static"
-    },
-    {
-      "source": "npm:tw-elements",
-      "target": "npm:chart.js",
-      "type": "static"
-    },
-    {
-      "source": "npm:tw-elements",
-      "target": "npm:chartjs-plugin-datalabels",
-      "type": "static"
-    },
-    {
-      "source": "npm:tw-elements",
-      "target": "npm:deepmerge",
-      "type": "static"
-    },
-    {
-      "source": "npm:tw-elements",
-      "target": "npm:detect-autofill",
-      "type": "static"
-    },
-    {
-      "source": "npm:tw-elements",
-      "target": "npm:perfect-scrollbar",
-      "type": "static"
-    },
-    {
-      "source": "npm:tw-elements",
-      "target": "npm:tailwindcss@3.3.0",
-      "type": "static"
-    },
-    {
-      "source": "npm:glob-parent@6.0.2",
-      "target": "npm:is-glob",
-      "type": "static"
-    },
-    {
-      "source": "npm:postcss-import@14.1.0",
-      "target": "npm:postcss",
-      "type": "static"
-    },
-    {
-      "source": "npm:postcss-import@14.1.0",
-      "target": "npm:postcss-value-parser",
-      "type": "static"
-    },
-    {
-      "source": "npm:postcss-import@14.1.0",
-      "target": "npm:read-cache",
-      "type": "static"
-    },
-    {
-      "source": "npm:postcss-import@14.1.0",
-      "target": "npm:resolve",
-      "type": "static"
-    },
-    {
-      "source": "npm:postcss-load-config@3.1.4",
-      "target": "npm:postcss",
-      "type": "static"
-    },
-    {
-      "source": "npm:postcss-load-config@3.1.4",
-      "target": "npm:ts-node",
-      "type": "static"
-    },
-    {
-      "source": "npm:postcss-load-config@3.1.4",
-      "target": "npm:lilconfig",
-      "type": "static"
-    },
-    {
-      "source": "npm:postcss-load-config@3.1.4",
-      "target": "npm:yaml@1.10.2",
-      "type": "static"
-    },
-    {
-      "source": "npm:postcss-nested@6.0.0",
-      "target": "npm:postcss",
-      "type": "static"
-    },
-    {
-      "source": "npm:postcss-nested@6.0.0",
-      "target": "npm:postcss-selector-parser",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:postcss",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:arg",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:chokidar",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:color-name@1.1.4",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:didyoumean",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:dlv",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:fast-glob",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:glob-parent@6.0.2",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:is-glob",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:jiti",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:lilconfig",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:micromatch",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:normalize-path",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:object-hash",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:picocolors",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:postcss",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:postcss-import@14.1.0",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:postcss-js",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:postcss-load-config@3.1.4",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:postcss-nested@6.0.0",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:postcss-selector-parser",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:postcss-value-parser",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:quick-lru",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:resolve",
-      "type": "static"
-    },
-    {
-      "source": "npm:tailwindcss@3.3.0",
-      "target": "npm:sucrase",
       "type": "static"
     },
     {

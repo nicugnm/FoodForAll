@@ -1,54 +1,27 @@
 import {createAction, props} from "@ngrx/store";
+import {RestaurantResponse} from "./restaurants.service";
+import {Observable} from "rxjs";
 
 
-export const AuthActionTypes = {
-  REGISTER: '[Auth] Register',
-  REGISTER_SUCCESS: '[Auth] Register Success',
-  REGISTER_FAILURE: '[Auth] Register Failure',
-  LOGIN: '[Auth] Login',
-  LOGIN_SUCCESS: '[Auth] Login Success',
-  LOGIN_FAILURE: '[Auth] Login Failure',
-  LOGOUT: '[Auth] LogOut'
+export const HomepageActionTypes = {
+  SEARCH: '[Homepage] Search',
+  SEARCH_SUCCESS: '[Homepage] Search Success',
+  SEARCH_FAILURE: '[Homepage] Search Failure'
 };
 
-export const Register = createAction(
-  AuthActionTypes.REGISTER,
+export const Search = createAction(
+  HomepageActionTypes.SEARCH,
   props<{
-    username: string | null | undefined;
-    email: string | null | undefined;
-    password: string | null | undefined;
-    confirmPassword: string | null | undefined
+    searchKeyword: string | null | undefined;
   }>()
 );
 
-export const RegisterSuccess = createAction(
-  AuthActionTypes.REGISTER_SUCCESS,
-  props<{ status: string; message: string; errorDetails: string }>()
+export const SearchSuccess = createAction(
+  HomepageActionTypes.SEARCH_SUCCESS,
+  props<{ response: Array<RestaurantResponse> }>()
 );
 
-export const RegisterFailure = createAction(
-  AuthActionTypes.REGISTER_FAILURE,
-  props<{ status: string; message: string; errorDetails: string }>()
-);
-
-export const LogIn = createAction(
-  AuthActionTypes.LOGIN,
-  props<{
-    username: string | null | undefined;
-    password: string | null | undefined
-  }>()
-);
-
-export const LogOut = createAction(
-  AuthActionTypes.LOGOUT
-);
-
-export const LogInSuccess = createAction(
-  AuthActionTypes.LOGIN_SUCCESS,
-  props<{ token: string; userId: string; expiration: string }>()
-);
-
-export const LogInFailure = createAction(
-  AuthActionTypes.LOGIN_FAILURE,
-  props<{ error: any }>()
+export const SearchFailure = createAction(
+  HomepageActionTypes.SEARCH_FAILURE,
+  props<{ response: Array<RestaurantResponse> }>()
 );

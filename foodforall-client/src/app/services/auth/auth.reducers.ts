@@ -26,11 +26,6 @@ export const initialState: AuthState = {
   loading: false
 };
 
-export const selectIsLoggedIn = createSelector(
-  (state: AppState) => state.auth,
-  (auth: AuthState) => auth.isLoggedIn
-);
-
 export const authReducer = createReducer(
   initialState,
   on(LogInSuccess, (state, { token, userId, expiration }) => ({

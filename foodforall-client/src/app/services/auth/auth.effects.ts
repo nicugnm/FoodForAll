@@ -17,10 +17,9 @@ import { Router } from '@angular/router';
 export class AuthEffects {
   register = createEffect(() => this.actions.pipe(
     ofType(Register),
-    switchMap
-    (action => this.authService.register(action.username, action.email, action.password, action.confirmPassword).pipe(
+    switchMap(action => this.authService.register(action.username, action.email, action.password, action.confirmPassword).pipe(
       map(response => RegisterSuccess({ status: response.status, message: response.message, errorDetails: response.errorDetails })),
-      catchError((err, caught) => {
+      catchError((err) => {
         return of(RegisterFailure({message: "", status: err, errorDetails: err}));
       })
     ))
@@ -36,7 +35,7 @@ export class AuthEffects {
 
   logOut = createEffect(() => this.actions.pipe(
     ofType(LogOut),
-    tap(action => {
+    tap(() => {
       localStorage.removeItem('token');
       localStorage.removeItem('userId');
       localStorage.removeItem('expiration');
@@ -56,7 +55,7 @@ export class AuthEffects {
 
   successRegister = createEffect(() => this.actions.pipe(
     ofType(RegisterSuccess),
-    tap(action => {
+    tap(() => {
       this.router.navigateByUrl('/login');
     })
   ), { dispatch: false });

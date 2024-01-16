@@ -1,28 +1,34 @@
 import {Injectable} from '@angular/core';
 import {TagType} from "../../components/restaurants-addon-tags/restaurants-addon-tags.component";
 import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class RestaurantsService {
 
-  private _restaurants: Array<RestaurantResponse> = new Array<RestaurantResponse>()
+  private homepageSearch = 'http://localhost:5174/api/restaurant/search';
 
-  public get restaurants() {
-    return this._restaurants;
+  // private _restaurants: Array<RestaurantResponse> = new Array<RestaurantResponse>()
+
+  // public get restaurants() {
+  //   return this._restaurants;
+  // }
+  //
+  // public set restaurants(restaurants: Array<RestaurantResponse>) {
+  //   this._restaurants = restaurants;
+  // }
+
+  constructor(private http: HttpClient) {
+    // this.http.get<Array<RestaurantResponse>>("http://localhost:5174/Restaurant").subscribe(response => {
+    //     this._restaurants = response;
+    //   });
   }
 
-  public set restaurants(restaurants: Array<RestaurantResponse>) {
-    this._restaurants = restaurants;
+  search(searchKeyword: string | null | undefined): Observable<any> {
+    return this.http.post(this.homepageSearch, { searchKeyword });
   }
-
-  constructor(private httpClient: HttpClient) {
-    this.httpClient.get<Array<RestaurantResponse>>("http://localhost:5174/Restaurant").subscribe(response => {
-        this._restaurants = response;
-      });
-  }
-
 }
 
 export interface RestaurantResponse {

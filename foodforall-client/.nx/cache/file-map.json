@@ -10,6 +10,7 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@ngrx/effects": "^16.3.0",
     "@ngrx/store": "^16.3.0",
     "@nrwl/angular": "^17.1.1",
     "flowbite": "^2.1.1",
@@ -46,7 +47,7 @@
         },
         {
           "file": ".nx/cache/file-map.json",
-          "hash": "11594978924112308625"
+          "hash": "12290019011199454815"
         },
         {
           "file": ".nx/cache/lockfile.hash",
@@ -58,7 +59,7 @@
         },
         {
           "file": ".nx/cache/project-graph.json",
-          "hash": "10803442492732873825"
+          "hash": "14795687581386485811"
         },
         {
           "file": "README.md",
@@ -70,11 +71,11 @@
         },
         {
           "file": "package-lock.json",
-          "hash": "7019051424179258742"
+          "hash": "12507763862654046103"
         },
         {
           "file": "package.json",
-          "hash": "4753390931287039414",
+          "hash": "5516398759504439483",
           "deps": [
             "npm:@angular/animations",
             "npm:@angular/common",
@@ -84,6 +85,7 @@
             "npm:@angular/platform-browser",
             "npm:@angular/platform-browser-dynamic",
             "npm:@angular/router",
+            "npm:@ngrx/effects",
             "npm:@ngrx/store",
             "npm:@nrwl/angular",
             "npm:flowbite",
@@ -135,13 +137,19 @@
         },
         {
           "file": "src/app/app.module.ts",
-          "hash": "6797882240801496702",
+          "hash": "8446171549270748207",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/platform-browser",
             "npm:@ngrx/store",
-            "npm:@angular/common"
+            "npm:@angular/common",
+            "npm:@angular/forms",
+            "npm:@ngrx/effects"
           ]
+        },
+        {
+          "file": "src/app/app.state.ts",
+          "hash": "81633478522494894"
         },
         {
           "file": "src/app/components/app.component.css",
@@ -241,7 +249,7 @@
         },
         {
           "file": "src/app/components/login/login.component.html",
-          "hash": "14814737825798850294"
+          "hash": "3213496454778337329"
         },
         {
           "file": "src/app/components/login/login.component.spec.ts",
@@ -252,9 +260,11 @@
         },
         {
           "file": "src/app/components/login/login.component.ts",
-          "hash": "12499359029426911642",
+          "hash": "11362339847332786564",
           "deps": [
-            "npm:@angular/core"
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@ngrx/store"
           ]
         },
         {
@@ -263,7 +273,7 @@
         },
         {
           "file": "src/app/components/navbar/navbar.component.html",
-          "hash": "16730783851929149774"
+          "hash": "10629364335309556469"
         },
         {
           "file": "src/app/components/navbar/navbar.component.spec.ts",
@@ -274,9 +284,10 @@
         },
         {
           "file": "src/app/components/navbar/navbar.component.ts",
-          "hash": "2933693013278240024",
+          "hash": "9171534166382184320",
           "deps": [
-            "npm:@angular/core"
+            "npm:@angular/core",
+            "npm:@ngrx/store"
           ]
         },
         {
@@ -318,9 +329,16 @@
         },
         {
           "file": "src/app/components/profile/profile.component.ts",
-          "hash": "2150883154764535810",
+          "hash": "850291338640892432",
           "deps": [
             "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/register/password-validators.ts",
+          "hash": "9129475753668725318",
+          "deps": [
+            "npm:@angular/forms"
           ]
         },
         {
@@ -329,7 +347,7 @@
         },
         {
           "file": "src/app/components/register/register.component.html",
-          "hash": "16457259185316761496"
+          "hash": "12183096737668483314"
         },
         {
           "file": "src/app/components/register/register.component.spec.ts",
@@ -340,9 +358,12 @@
         },
         {
           "file": "src/app/components/register/register.component.ts",
-          "hash": "10299166573015206652",
+          "hash": "15816772581641538996",
           "deps": [
-            "npm:@angular/core"
+            "npm:@angular/core",
+            "npm:rxjs",
+            "npm:@angular/forms",
+            "npm:@ngrx/store"
           ]
         },
         {
@@ -553,6 +574,37 @@
           ]
         },
         {
+          "file": "src/app/services/auth/auth.actions.ts",
+          "hash": "6562594083329503830",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "src/app/services/auth/auth.effects.ts",
+          "hash": "12413574943036269552",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/effects",
+            "npm:rxjs",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/services/auth/auth.reducers.ts",
+          "hash": "11211727315919639357",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "src/app/services/auth/auth.selectors.ts",
+          "hash": "4086286807190976961",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
           "file": "src/app/services/auth/auth.service.spec.ts",
           "hash": "11573279180724306339",
           "deps": [
@@ -561,9 +613,11 @@
         },
         {
           "file": "src/app/services/auth/auth.service.ts",
-          "hash": "17876129883489426834",
+          "hash": "15565737068769090551",
           "deps": [
-            "npm:@angular/core"
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:rxjs"
           ]
         },
         {
