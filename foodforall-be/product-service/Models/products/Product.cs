@@ -5,7 +5,7 @@ namespace product_service.Models;
 public class Product
 {
     
-    public Product(Guid id, string name, string description, decimal price, int quantityAvailable, bool enabled)
+    public Product(Guid id, string name, string description, decimal price, int quantityAvailable, bool enabled, ProductCategory productCategory, bool isPopular)
     {
         Id = id;
         Name = name;
@@ -13,6 +13,8 @@ public class Product
         Price = price;
         QuantityAvailable = quantityAvailable;
         Enabled = enabled;
+        ProductCategory = productCategory;
+        IsPopular = isPopular;
     }
 
     [Key]
@@ -29,5 +31,16 @@ public class Product
     public int QuantityAvailable { get; set; }
     
     public bool Enabled { get; set; }
+    
+    public ProductCategory ProductCategory { get; set; }
+    
+    public bool IsPopular { get; set; }
+}
 
+public enum ProductCategory
+{
+    FASTFOOD,
+    PUI,
+    VITA,
+    ALL
 }

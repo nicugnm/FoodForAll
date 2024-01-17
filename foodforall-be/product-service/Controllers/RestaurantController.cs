@@ -26,7 +26,7 @@ public class RestaurantController : ControllerBase
     }
 
     [HttpPost("search", Name = "GetProductListPerRestaurant")]
-    public Task<List<Restaurant>> Post([FromBody] ProductListRestaurantRequest productListRestaurantRequest)
+    public Task<SearchResponse> Post([FromBody] ProductListRestaurantRequest productListRestaurantRequest)
     {
         return _restaurantService.GetProductListPerRestaurant(productListRestaurantRequest);
     }

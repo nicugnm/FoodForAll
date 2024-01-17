@@ -1,21 +1,20 @@
-import { Injectable } from '@angular/core';
-import { Actions, ofType, createEffect } from '@ngrx/effects';
-import {
-   Search, SearchSuccess, SearchFailure
-} from './restaurant.actions';
-import {exhaustMap, of} from 'rxjs';
-import { map, catchError, switchMap, tap } from 'rxjs/operators';
-import { Router } from '@angular/router';
-import {RestaurantResponse, RestaurantsService} from "./restaurants.service";
+import {Injectable} from '@angular/core';
+import {Actions, createEffect, ofType} from '@ngrx/effects';
+import {Search, SearchFailure, SearchSuccess} from './restaurant.actions';
+import {of} from 'rxjs';
+import {catchError, map, switchMap} from 'rxjs/operators';
+import {ProductCategory, RestaurantResponse, RestaurantsService} from "./restaurants.service";
+import {SortingType} from "./restaurant.reducers";
 
 @Injectable()
-export class Homepageffects {
+export class HomepageEffects {
   search = createEffect(() => this.actions.pipe(
     ofType(Search),
-    switchMap(action => this.restaurantService.search(action.searchKeyword).pipe(
-      map(response => SearchSuccess({ response: response })),
-      catchError((err, caught) => {
-        return of(SearchFailure({response: new Array<RestaurantResponse>()}));
+    switchMap(action => this.restaurantService.search(action.searchKeyword, action.page, action.sortingType, action.productCategory).pipe(
+      map(result => SearchSuccess({ restaurants: result.restaurants, sortingType: result.sortingType, page: result.page, productCategory: result.productCategory, totalPages: result.totalPages
+      })),
+      catchError((err) => {
+        return of(SearchFailure({restaurants: new Array<RestaurantResponse>(), page: 0, productCategory: ProductCategory.ALL, sortingType: SortingType.ASC, totalPages: 0}));
       })
     ))
   ));

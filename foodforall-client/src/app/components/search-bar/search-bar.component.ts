@@ -1,11 +1,9 @@
-import {Component, ElementRef, ViewChild} from '@angular/core';
+import {Component} from '@angular/core';
 import {Router} from "@angular/router";
 import {Store} from "@ngrx/store";
-import {Register} from "../../services/auth/auth.actions";
 import {Search} from "../../services/restaurants/restaurant.actions";
-import {selectIsLoggedIn} from "../../services/auth/auth.selectors";
-import {selectSearchResponse} from "../../services/restaurants/restaurant.selectors";
-import {AppState} from "../../app.state";
+import {SortingType} from "../../services/restaurants/restaurant.reducers";
+import {ProductCategory} from "../../services/restaurants/restaurants.service";
 
 @Component({
   selector: 'app-search-bar',
@@ -14,18 +12,23 @@ import {AppState} from "../../app.state";
 })
 export class SearchBarComponent {
 
-  searchResponse$ = this.store.select(selectSearchResponse);
-
-  constructor(private store: Store<AppState>) {
+  constructor(private store: Store,
+              private router: Router) {
     this.store = store;
   }
 
-  protected onSearch(keywordsInput: string) {
+  onSearch(keywordsInput: string) {
+    searchBarKeyword = keywordsInput;
     this.store.dispatch(
       Search({
-        searchKeyword: keywordsInput
+        searchKeyword: keywordsInput,
+        sortingType: SortingType.ASC,
+        productCategory: ProductCategory.ALL,
+        page: 0
       })
     );
-    //this.router.navigate([`/search-elements/${keywordsInput}`]);
+    this.router.navigate([`/search-elements/${keywordsInput}`]);
   }
 }
+
+export let searchBarKeyword = "";

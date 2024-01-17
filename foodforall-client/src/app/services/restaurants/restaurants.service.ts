@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {TagType} from "../../components/restaurants-addon-tags/restaurants-addon-tags.component";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {SortingType} from "./restaurant.reducers";
 
 @Injectable({
   providedIn: 'root'
@@ -10,24 +11,13 @@ export class RestaurantsService {
 
   private homepageSearch = 'http://localhost:5174/api/restaurant/search';
 
-  // private _restaurants: Array<RestaurantResponse> = new Array<RestaurantResponse>()
+  constructor(private http: HttpClient) {}
 
-  // public get restaurants() {
-  //   return this._restaurants;
-  // }
-  //
-  // public set restaurants(restaurants: Array<RestaurantResponse>) {
-  //   this._restaurants = restaurants;
-  // }
-
-  constructor(private http: HttpClient) {
-    // this.http.get<Array<RestaurantResponse>>("http://localhost:5174/Restaurant").subscribe(response => {
-    //     this._restaurants = response;
-    //   });
-  }
-
-  search(searchKeyword: string | null | undefined): Observable<any> {
-    return this.http.post(this.homepageSearch, { searchKeyword });
+  search(searchKeyword: string | null | undefined,
+         page: number | null | undefined,
+         sortingType: SortingType | null | undefined,
+         productCategory: ProductCategory | null | undefined): Observable<any> {
+    return this.http.post(this.homepageSearch, { searchKeyword, page, sortingType, productCategory });
   }
 }
 
@@ -38,7 +28,7 @@ export interface RestaurantResponse {
   closeHour: Date,
   openDates: Array<0 | 1 | 2 | 3 | 4 | 5 | 6>
   products: Array<Product>,
-  tagsType: Array<TagType>
+  tagsType: Array<TagType>,
 }
 
 export interface Product {
@@ -47,5 +37,14 @@ export interface Product {
   description?: string,
   price: number,
   quantityAvailable: number,
-  enabled: boolean
+  enabled: boolean,
+  productCategory: ProductCategory,
+  isPopular: boolean
+}
+
+export enum ProductCategory {
+  FAST_FOOD,
+  PUI,
+  VITA,
+  ALL
 }

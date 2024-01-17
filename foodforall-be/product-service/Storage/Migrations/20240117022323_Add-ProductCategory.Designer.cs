@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using product_service.Storage;
 
@@ -11,9 +12,11 @@ using product_service.Storage;
 namespace product_service.Storage.Migrations
 {
     [DbContext(typeof(RestaurantDbContext))]
-    partial class RestaurantDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240117022323_Add-ProductCategory")]
+    partial class AddProductCategory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -33,9 +36,6 @@ namespace product_service.Storage.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Enabled")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsPopular")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
@@ -61,7 +61,6 @@ namespace product_service.Storage.Migrations
                             Id = new Guid("cc1c6aad-18f3-40da-b337-1f55609baa12"),
                             Description = "Description 1",
                             Enabled = true,
-                            IsPopular = false,
                             Name = "Product 1",
                             Price = 30.53m,
                             ProductCategory = 0,
@@ -72,7 +71,6 @@ namespace product_service.Storage.Migrations
                             Id = new Guid("14d2aa24-15af-4286-9dd5-8aa0939bef8b"),
                             Description = "Description 2",
                             Enabled = true,
-                            IsPopular = false,
                             Name = "Product 2",
                             Price = 15.53m,
                             ProductCategory = 0,
@@ -83,7 +81,6 @@ namespace product_service.Storage.Migrations
                             Id = new Guid("acf788bf-f881-4249-9104-ae62cd7262ce"),
                             Description = "Description 3",
                             Enabled = false,
-                            IsPopular = false,
                             Name = "Product 3",
                             Price = 15.53m,
                             ProductCategory = 0,
@@ -94,7 +91,6 @@ namespace product_service.Storage.Migrations
                             Id = new Guid("b4951e10-76e9-4ef1-b050-31c8e41f02c1"),
                             Description = "Description 1",
                             Enabled = true,
-                            IsPopular = false,
                             Name = "Product 4",
                             Price = 30.53m,
                             ProductCategory = 0,
@@ -105,7 +101,6 @@ namespace product_service.Storage.Migrations
                             Id = new Guid("d3785f31-20b8-4d48-9e2b-7a1f456d05b2"),
                             Description = "Description 2",
                             Enabled = true,
-                            IsPopular = false,
                             Name = "Product 5",
                             Price = 15.53m,
                             ProductCategory = 0,
@@ -116,7 +111,6 @@ namespace product_service.Storage.Migrations
                             Id = new Guid("cf1711ce-216a-45c7-9234-8dd9e54dfb0c"),
                             Description = "Description 3",
                             Enabled = false,
-                            IsPopular = false,
                             Name = "Product 6",
                             Price = 15.53m,
                             ProductCategory = 0,

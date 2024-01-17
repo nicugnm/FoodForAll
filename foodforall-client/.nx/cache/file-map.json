@@ -47,19 +47,19 @@
         },
         {
           "file": ".nx/cache/file-map.json",
-          "hash": "12290019011199454815"
+          "hash": "4707077060467537474"
         },
         {
           "file": ".nx/cache/lockfile.hash",
-          "hash": "4126557008709178939"
+          "hash": "11490758151734687131"
         },
         {
           "file": ".nx/cache/parsed-lock-file.json",
-          "hash": "2029927574388810899"
+          "hash": "4869571682650599332"
         },
         {
           "file": ".nx/cache/project-graph.json",
-          "hash": "14795687581386485811"
+          "hash": "2707398537593915615"
         },
         {
           "file": "README.md",
@@ -149,7 +149,7 @@
         },
         {
           "file": "src/app/app.state.ts",
-          "hash": "81633478522494894"
+          "hash": "5207562241164543332"
         },
         {
           "file": "src/app/components/app.component.css",
@@ -438,7 +438,7 @@
         },
         {
           "file": "src/app/components/restaurants-homepage/restaurants-homepage.component.html",
-          "hash": "16974930772404388995"
+          "hash": "10483717768094547013"
         },
         {
           "file": "src/app/components/restaurants-homepage/restaurants-homepage.component.spec.ts",
@@ -471,10 +471,11 @@
         },
         {
           "file": "src/app/components/search-bar/search-bar.component.ts",
-          "hash": "3921589599736422672",
+          "hash": "12400537512248288083",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/router"
+            "npm:@angular/router",
+            "npm:@ngrx/store"
           ]
         },
         {
@@ -582,7 +583,7 @@
         },
         {
           "file": "src/app/services/auth/auth.effects.ts",
-          "hash": "12413574943036269552",
+          "hash": "17706225213497934739",
           "deps": [
             "npm:@angular/core",
             "npm:@ngrx/effects",
@@ -592,7 +593,7 @@
         },
         {
           "file": "src/app/services/auth/auth.reducers.ts",
-          "hash": "11211727315919639357",
+          "hash": "8282471233960487482",
           "deps": [
             "npm:@ngrx/store"
           ]
@@ -621,6 +622,39 @@
           ]
         },
         {
+          "file": "src/app/services/restaurants/restaurant.actions.ts",
+          "hash": "15792148512389154172",
+          "deps": [
+            "npm:@ngrx/store",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/services/restaurants/restaurant.effects.ts",
+          "hash": "5044562177123934931",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/effects",
+            "npm:rxjs",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/services/restaurants/restaurant.reducers.ts",
+          "hash": "13610311747614537380",
+          "deps": [
+            "npm:@ngrx/store",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/services/restaurants/restaurant.selectors.ts",
+          "hash": "15049939267024822120",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
           "file": "src/app/services/restaurants/restaurants.service.spec.ts",
           "hash": "7802115859352423154",
           "deps": [
@@ -629,10 +663,11 @@
         },
         {
           "file": "src/app/services/restaurants/restaurants.service.ts",
-          "hash": "4562033525533795930",
+          "hash": "12297441577143738437",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/common"
+            "npm:@angular/common",
+            "npm:rxjs"
           ]
         },
         {

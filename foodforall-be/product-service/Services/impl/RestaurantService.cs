@@ -60,7 +60,7 @@ public class RestaurantService : IRestaurantService
         throw new NotImplementedException();
     }
 
-    public async Task<List<Restaurant>> GetProductListPerRestaurant(ProductListRestaurantRequest productListRestaurantRequest)
+    public async Task<SearchResponse> GetProductListPerRestaurant(ProductListRestaurantRequest productListRestaurantRequest)
     {
         try
         {
@@ -76,13 +76,46 @@ public class RestaurantService : IRestaurantService
                 restaurant.Products = restaurant.Products
                     .Where(pr => pr.Name.ToLower().Contains(searchKeywordLower))
                     .ToList();
+                
+                // Filter by ProductCategory if specified
+                if (productListRestaurantRequest.ProductCategory != ProductCategory.ALL)
+                {
+                    restaurant.Products = restaurant.Products
+                        .Where(pr => pr.ProductCategory == productListRestaurantRequest.ProductCategory)
+                        .ToList();
+                }
             }
 
-            return restaurants;
+            int TotalRestaurants = restaurants.Count();
+
+            // Apply sorting
+            if (productListRestaurantRequest.SortingType.HasValue)
+            {
+                restaurants = productListRestaurantRequest.SortingType == SortingType.ASC 
+                    ? restaurants.OrderBy(r => r.Name).ToList()
+                    : restaurants.OrderByDescending(r => r.Name).ToList();
+            }
+
+            // Apply pagination
+            int pageSize = 3; // Set your page size or make it a parameter
+            int pageNumber = Math.Max(productListRestaurantRequest.Page ?? 1, 1); // Ensure page number is not less than 1
+            restaurants = restaurants
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            return new SearchResponse()
+            {
+                Restaurants = restaurants,
+                ProductCategory = productListRestaurantRequest.ProductCategory,
+                Page = productListRestaurantRequest.Page,
+                SortingType = productListRestaurantRequest.SortingType,
+                TotalPages = (int) Math.Ceiling(TotalRestaurants / 3d)
+            };
         }
         catch (Exception ex)
         {
-            return null;
+            return new SearchResponse();
         }
     }
 

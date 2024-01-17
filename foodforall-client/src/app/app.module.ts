@@ -30,6 +30,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {EffectsModule} from "@ngrx/effects";
 import {AuthEffects} from "./services/auth/auth.effects";
 import {reducers} from "./app.state";
+import {HomepageEffects} from "./services/restaurants/restaurant.effects";
 
 @NgModule({
   declarations: [
@@ -55,7 +56,7 @@ import {reducers} from "./app.state";
   imports: [
     BrowserModule,
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([AuthEffects]),
+    EffectsModule.forRoot([AuthEffects, HomepageEffects]),
     AppRoutingModule,
     HttpClientModule,
     NgOptimizedImage,

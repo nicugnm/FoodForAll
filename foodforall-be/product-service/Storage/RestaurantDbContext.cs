@@ -83,18 +83,18 @@ public class RestaurantDbContext : DbContext
             );
         
         var product1 = new Product(new Guid("cc1c6aad-18f3-40da-b337-1f55609baa12"), "Product 1", "Description 1",
-            new decimal(30.53), 2, true);
+            new decimal(30.53), 2, true, ProductCategory.FASTFOOD, true);
         var product2 = new Product(new Guid("14d2aa24-15af-4286-9dd5-8aa0939bef8b"), "Product 2", "Description 2",
-            new decimal(15.53), 0, true);
+            new decimal(15.53), 0, true, ProductCategory.FASTFOOD, false);
         var product3 = new Product(new Guid("acf788bf-f881-4249-9104-ae62cd7262ce"), "Product 3", "Description 3",
-            new decimal(15.53), 10, false);
+            new decimal(15.53), 10, false, ProductCategory.PUI, true);
         
         var product4 = new Product(new Guid("b4951e10-76e9-4ef1-b050-31c8e41f02c1"), "Product 4", "Description 1",
-            new decimal(30.53), 2, true);
+            new decimal(30.53), 2, true, ProductCategory.PUI, false);
         var product5 = new Product(new Guid("d3785f31-20b8-4d48-9e2b-7a1f456d05b2"), "Product 5", "Description 2",
-            new decimal(15.53), 0, true);
+            new decimal(15.53), 0, true, ProductCategory.VITA, true);
         var product6 = new Product(new Guid("cf1711ce-216a-45c7-9234-8dd9e54dfb0c"), "Product 6", "Description 3",
-            new decimal(15.53), 10, false);
+            new decimal(15.53), 10, false, ProductCategory.VITA, false);
 
         builder.Entity<Product>()
             .HasData(new[]

@@ -11,5 +11,5 @@ public interface IRestaurantService
     Task<Restaurant> UpdateRestaurantAsync(Restaurant restaurant); // PUT Restaurant
     Task<(bool, string)> DeleteRestaurantAsync(Restaurant restaurant); // DELETE Restaurant
 
-    Task<List<Restaurant>> GetProductListPerRestaurant(ProductListRestaurantRequest productListRestaurantRequest);
+    Task<SearchResponse> GetProductListPerRestaurant(ProductListRestaurantRequest productListRestaurantRequest);
 }
